@@ -1,0 +1,57 @@
+{
+  "host" : "xxxx.xxxx.com",
+  "port" : 9999,
+  "username" : "",
+  "password": "",
+  "alias" : "tomcat_aws",
+  "queries" : [
+  {
+    "object_name" : "java.lang:type=Memory",
+    "attributes" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
+    "object_alias" : "Memory"
+  }, {
+    "object_name" : "java.lang:type=MemoryPool,name=Code Cache",
+    "attributes" : [ "Name", "PeakUsage", "Usage", "Type" ],
+    "object_alias" : "MemoryPoolCodeCache"
+  }, {
+    "object_name" : "java.lang:type=MemoryPool,name=*Perm Gen",
+    "attributes" : [ "Name", "PeakUsage", "Usage", "Type" ],
+    "object_alias" : "MemoryPoolPermGen"
+  }, {
+    "object_name" : "java.lang:type=MemoryPool,name=*Old Gen",
+    "attributes" : [ "Name", "PeakUsage", "Usage", "Type" ],
+    "object_alias" : "MemoryPoolOldGen"
+  }, {
+    "object_name" : "java.lang:type=MemoryPool,name=*Eden Space",
+    "attributes" : [ "Name", "PeakUsage", "Usage", "Type" ],
+    "object_alias" : "MemoryPoolEdenSpace"
+  }, {
+    "object_name" : "java.lang:type=MemoryPool,name=*Survivor Space",
+    "attributes" : [ "Name", "PeakUsage", "Usage", "Type" ],
+    "object_alias" : "MemoryPoolSurvivorSpace"
+  }, {
+    "object_name" : "java.lang:type=GarbageCollector,name=*MarkSweep",
+    "attributes" : [ "Name", "CollectionCount", "CollectionTime" ],
+    "object_alias" : "GarbageCollectorMarkSweep"
+  }, {
+    "object_name" : "java.lang:type=GarbageCollector,name=ParNew",
+    "attributes" : [ "Name", "CollectionCount", "CollectionTime" ],
+    "object_alias" : "GarbageCollectorParNew"
+  }, {
+    "object_name" : "java.lang:type=ClassLoading",
+    "attributes" : [ "LoadedClassCount", "TotalLoadedClassCount", "UnloadedClassCount" ],
+    "object_alias" : "ClassLoading"
+  }, {
+    "object_name" : "java.lang:type=Runtime",
+    "attributes" : [ "Uptime", "StartTime" ],
+    "object_alias" : "Runtime"
+  }, {
+    "object_name" : "java.lang:type=Threading",
+    "attributes" : [ "ThreadCount", "TotalStartedThreadCount", "DaemonThreadCount", "PeakThreadCount" ],
+    "object_alias" : "Threading"
+  }, {
+    "object_name" : "java.lang:type=OperatingSystem",
+    "attributes" : [ "OpenFileDescriptorCount", "FreePhysicalMemorySize", "CommittedVirtualMemorySize", "FreeSwapSpaceSize", "ProcessCpuLoad", "ProcessCpuTime", "SystemCpuLoad", "TotalPhysicalMemorySize", "TotalSwapSpaceSize", "SystemLoadAverage" ],
+    "object_alias" : "OperatingSystem"
+  } ]
+}
